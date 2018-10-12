@@ -9,5 +9,4 @@
 git commit -am "update the readme.md"
 git push origin master 
 ```
-
 Are the commands we use to update the repo
