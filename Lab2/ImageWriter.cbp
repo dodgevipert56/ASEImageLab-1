@@ -8,72 +8,72 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/s5101972/ASE/ASEImageLab/Lab2"/>
+				<Option working_dir="/Users/daria/Documents/ASE/ASEImageLab/Lab2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/s5101972/ASE/ASEImageLab/Lab2"/>
+				<Option working_dir="/Users/daria/Documents/ASE/ASEImageLab/Lab2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/s5101972/ASE/ASEImageLab/Lab2"/>
+				<Option working_dir="/Users/daria/Documents/ASE/ASEImageLab/Lab2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ImageWriter">
-				<Option output="/home/s5101972/ASE/ASEImageLab/Lab2/ImageWriter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/s5101972/ASE/ASEImageLab/Lab2"/>
+				<Option output="/Users/daria/Documents/ASE/ASEImageLab/Lab2/ImageWriter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/daria/Documents/ASE/ASEImageLab/Lab2"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/public/devel/2018/include/ImageMagick-7"/>
+					<Add directory="/usr/local/Cellar/imagemagick/7.0.8-12/include/ImageMagick-7"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 ImageWriter"/>
-					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 ImageWriter"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ImageWriter/fast">
-				<Option output="/home/s5101972/ASE/ASEImageLab/Lab2/ImageWriter" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/s5101972/ASE/ASEImageLab/Lab2"/>
+				<Option output="/Users/daria/Documents/ASE/ASEImageLab/Lab2/ImageWriter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/daria/Documents/ASE/ASEImageLab/Lab2"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/public/devel/2018/include/ImageMagick-7"/>
+					<Add directory="/usr/local/Cellar/imagemagick/7.0.8-12/include/ImageMagick-7"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 ImageWriter/fast"/>
-					<CompileFile command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/opt/rh/devtoolset-7/root/usr/bin/gmake -f &quot;/home/s5101972/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 ImageWriter/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/daria/Documents/ASE/ASEImageLab/Lab2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/s5101972/ASE/ASEImageLab/Lab2/main.cpp">
+		<Unit filename="/Users/daria/Documents/ASE/ASEImageLab/Lab2/main.cpp">
 			<Option target="ImageWriter"/>
 		</Unit>
-		<Unit filename="/home/s5101972/ASE/ASEImageLab/Lab2/CMakeLists.txt">
+		<Unit filename="/Users/daria/Documents/ASE/ASEImageLab/Lab2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
