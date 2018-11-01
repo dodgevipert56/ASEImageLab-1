@@ -65,10 +65,10 @@ TEST(Particle, setDirection)
     EXPECT_FLOAT_EQ(direction.z, 0.0f);
 }
 
-TEST(Particle, setWeight)
+TEST(Particle, setLifeTime)
 {
     Particle p;
-    p.setWeight(1.0f);
-    auto weight = p.getWeight();
-    EXPECT_FLOAT_EQ(weight, 1.0f);
+    p.setLifeTime(10);
+    auto lifetime = p.getLifeTime();
+    EXPECT_EQ(lifetime, 10);
 }

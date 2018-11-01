@@ -40,12 +40,12 @@ Vec3 Particle::getDirection() const
     return m_dir;
 }
 
-void Particle::setWeight(float _weight)
+void Particle::setLifeTime(int _lifetime)
 {
-    m_weight = _weight;
+    m_lifetime = _lifetime;
 }
 
-float Particle::getWeight() const
+int Particle::getLifeTime() const
 {
-    return m_weight;
+    return m_lifetime;
 }

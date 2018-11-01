@@ -24,15 +24,15 @@ public:
     Vec3 getDirection() const;
     void setDirection(const Vec3 &dir);
 
-    float getWeight() const;
-    void setWeight(float _weight);
+    int getLifeTime() const;
+    void setLifeTime(int _lifetime);
 
 private:
     Vec3 m_position;
     Vec3 m_color = {0.0f, 0.0f, 0.0f};
     int m_life = 0;
     Vec3 m_dir;
-    float m_weight = 0;
+    int m_lifetime = 0;
 
 };
 
