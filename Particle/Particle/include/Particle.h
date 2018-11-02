@@ -22,10 +22,14 @@ public:
     void setColor(const Vec3 &color);
 
     Vec3 getDirection() const;
-    void setDirection(const Vec3 &dir);
+    void setDirection(const Vec3 &_dir);
 
     int getLifeTime() const;
     void setLifeTime(int _lifetime);
+
+    void update();
+
+    void render() const;
 
 private:
     Vec3 m_position;

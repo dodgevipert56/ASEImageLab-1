@@ -1,4 +1,5 @@
 #include "Particle.h"
+#include <iostream>
 
 Vec3 Particle::getPosition() const
 {
@@ -30,9 +31,9 @@ Vec3 Particle::getColor() const
     return m_color;
 }
 
-void Particle::setDirection(const Vec3 &dir)
+void Particle::setDirection(const Vec3 &_dir)
 {
-    m_dir = dir;
+    m_dir = _dir;
 }
 
 Vec3 Particle::getDirection() const
@@ -48,4 +49,14 @@ void Particle::setLifeTime(int _lifetime)
 int Particle::getLifeTime() const
 {
     return m_lifetime;
+}
+
+void Particle::update()
+{
+    m_position += m_dir;
+}
+
+void Particle::render() const
+{
+    std::cout << m_position.x << " " << m_position.y << " " << m_position.z << "\n";
 }

@@ -5,6 +5,14 @@ struct Vec3
 {
     Vec3(float _x, float _y, float _z) : x(_x), y(_y),z(_z){}
     Vec3()=default;
+    Vec3(const Vec3 &)=default;
+
+    void operator +=(const Vec3 &_rhs)
+    {
+        x+=_rhs.x;
+        y+=_rhs.y;
+        z+=_rhs.z;
+    }
 
     float x=0.0f;
     float y=0.0f;

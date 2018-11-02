@@ -18,12 +18,33 @@ TEST(Particle, defaultCtor)
     EXPECT_FLOAT_EQ(pos.z, 0.0f);
 }
 
-TEST(Vec3, defaultCtor)
+TEST(Vec3, userCtor)
 {
-    Vec3 a;
-    EXPECT_FLOAT_EQ(a.x, 0.0f);
-    EXPECT_FLOAT_EQ(a.y, 0.0f);
-    EXPECT_FLOAT_EQ(a.z, 0.0f);
+    Vec3 a={0.2f, -0.2f, 0.2f};
+    EXPECT_FLOAT_EQ(a.x, 0.2f);
+    EXPECT_FLOAT_EQ(a.y, -0.2f);
+    EXPECT_FLOAT_EQ(a.z, 0.2f);
+}
+
+TEST(Vec3, copyCtor)
+{
+    Vec3 a={0.2f, -0.2f, 0.2f};
+    auto b = a;
+    EXPECT_FLOAT_EQ(b.x, 0.2f);
+    EXPECT_FLOAT_EQ(b.y, -0.2f);
+    EXPECT_FLOAT_EQ(b.z, 0.2f);
+}
+
+TEST(Particle, update)
+{
+    Particle p;
+    p.setDirection(Vec3(0,1,0));
+    for(int i = 0; i<10; i++)
+    {
+        p.update();
+        p.render();
+    }
+    EXPECT_FLOAT_EQ(p.getPosition().y, 10.0f);
 }
 
 TEST(Particle,setLife)
@@ -71,4 +92,14 @@ TEST(Particle, setLifeTime)
     p.setLifeTime(10);
     auto lifetime = p.getLifeTime();
     EXPECT_EQ(lifetime, 10);
+}
+
+TEST(Vec3, plusEquals)
+{
+    Vec3 a = {1.0f, 2.0f, 3.0f};
+    Vec3 b = {1.0f, 1.0f, 1.0f};
+    a += b;
+    EXPECT_FLOAT_EQ(a.x, 2.0f);
+    EXPECT_FLOAT_EQ(a.y, 3.0f);
+    EXPECT_FLOAT_EQ(a.z, 4.0f);
 }
