@@ -24,8 +24,8 @@ public:
     Vec3 getDirection() const;
     void setDirection(const Vec3 &_dir);
 
-    int getLifeTime() const;
-    void setLifeTime(int _lifetime);
+    int getMaxLife() const;
+    void setMaxLife(int _maxlife);
 
     void update();
 
@@ -36,7 +36,7 @@ private:
     Vec3 m_color = {0.0f, 0.0f, 0.0f};
     int m_life = 0;
     Vec3 m_dir;
-    int m_lifetime = 0;
+    int m_maxlife = 0;
 
 };
 

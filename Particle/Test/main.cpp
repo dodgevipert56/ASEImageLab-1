@@ -86,11 +86,11 @@ TEST(Particle, setDirection)
     EXPECT_FLOAT_EQ(direction.z, 0.0f);
 }
 
-TEST(Particle, setLifeTime)
+TEST(Particle, setMaxLife)
 {
     Particle p;
-    p.setLifeTime(10);
-    auto lifetime = p.getLifeTime();
+    p.setMaxLife(10);
+    auto lifetime = p.getMaxLife();
     EXPECT_EQ(lifetime, 10);
 }
 

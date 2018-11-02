@@ -41,14 +41,14 @@ Vec3 Particle::getDirection() const
     return m_dir;
 }
 
-void Particle::setLifeTime(int _lifetime)
+void Particle::setMaxLife(int _maxlife)
 {
-    m_lifetime = _lifetime;
+    m_maxlife = _maxlife;
 }
 
-int Particle::getLifeTime() const
+int Particle::getMaxLife() const
 {
-    return m_lifetime;
+    return m_maxlife;
 }
 
 void Particle::update()
