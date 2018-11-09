@@ -1,11 +1,13 @@
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
 #include "Vec3.h"
+#include <cstring>
 
 class Particle
 {
 public:
     Particle()=default;
+    Particle(const Vec3 &_pos, const Vec3 &_dir, size_t _maxLife);
     ~Particle()=default;
     Particle(const Particle &)=default;
     Particle(Particle &&)=default;
@@ -15,8 +17,8 @@ public:
     Vec3 getPosition() const;
     void setPosition(const Vec3 &pos);
 
-    int getLife() const;
-    void setLife(int _life);
+    size_t getLife() const;
+    void setLife(size_t _life);
 
     Vec3 getColor() const;
     void setColor(const Vec3 &color);
@@ -24,8 +26,8 @@ public:
     Vec3 getDirection() const;
     void setDirection(const Vec3 &_dir);
 
-    int getMaxLife() const;
-    void setMaxLife(int _maxlife);
+    size_t getMaxLife() const;
+    void setMaxLife(size_t _maxlife);
 
     void update();
 
@@ -34,9 +36,9 @@ public:
 private:
     Vec3 m_position;
     Vec3 m_color = {0.0f, 0.0f, 0.0f};
-    int m_life = 0;
+    size_t m_life = 0;
     Vec3 m_dir;
-    int m_maxlife = 0;
+    size_t m_maxlife = 0;
 
 };
 

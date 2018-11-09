@@ -1,32 +1,14 @@
 #include <iostream>
-#include "Particle.h"
+#include "Emitter.h"
 
 int main()
 {
     std::cout << "Particle Main\n";
-    Particle p;
+    Emitter e(Vec3(0,0,0), 100);
 
-    p.setDirection({0.0f, 1.0f, 0.0f});
-
-    p.setMaxLife(10);
-    p.setLife(0);
-
-    // If age >= maxLife ( ==10 for default ) -> move it back to (0,0,0)
-    // If age < maxLife                    -> move it up according to direction
-    while(true)
+    for (size_t i = 0; i < 10; i++)
     {
-        p.render();
-
-        if (p.getLife() < p.getMaxLife())
-        {
-            p.update();
-            int lifeUpdate = p.getLife() + 1;
-            p.setLife(lifeUpdate);
-        } else
-        {
-            p.setPosition({0.0f, 0.0f, 0.0f});
-            p.setLife(0);
-        }
-
+        e.render();
+        e.update();
     }
 }

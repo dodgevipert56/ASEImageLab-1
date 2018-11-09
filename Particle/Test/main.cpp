@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include "Particle.h"
 #include "Vec3.h"
+#include "Emitter.h"
 
 int main(int argc, char **argv)
 {
@@ -44,7 +45,7 @@ TEST(Particle, update)
         p.update();
         p.render();
     }
-    EXPECT_FLOAT_EQ(p.getPosition().y, 10.0f);
+    EXPECT_FLOAT_EQ(p.getPosition().y, 0.0f);
 }
 
 TEST(Particle,setLife)
@@ -103,3 +104,44 @@ TEST(Vec3, plusEquals)
     EXPECT_FLOAT_EQ(a.y, 3.0f);
     EXPECT_FLOAT_EQ(a.z, 4.0f);
 }
+
+TEST(Vec3, equals)
+{
+    Vec3 a(0.1f, -0.2f, 2.0f);
+    Vec3 b(0.1f, -0.2f, 2.0f);
+    EXPECT_TRUE(a==b);
+}
+
+TEST(Particle, userCtor)
+{
+    Particle p(Vec3(1.0f, 0.0f, 1.0f), Vec3(0.0f, -0.1f, 0.0f), 100);
+    EXPECT_TRUE(p.getMaxLife() == 100);
+    EXPECT_TRUE(p.getPosition() == Vec3(1.0f, 0.0f, 1.0f));
+    EXPECT_TRUE(p.getDirection() ==  Vec3(0.0f, -0.1f, 0.0f));
+
+}
+
+TEST(Particle, reset)
+{
+    Particle p(Vec3(0.0f, 0.0f, 0.0f), Vec3(0.0f, -0.1f, 0.0f), 100);
+    for (size_t i = 0; i<100; ++i)
+    {
+        p.update();
+    }
+    //auto pos = p.getPosition();
+    //std::cout << pos.y << "\n";
+    EXPECT_TRUE(p.getPosition()==Vec3(0.0f, 0.0f, 0.0f));
+}
+
+TEST(Emitter, defaultCtor)
+{
+    Emitter e;
+    EXPECT_TRUE(e.getNumParticles() == 0);
+}
+
+TEST(Emitter, userCtor)
+{
+    Emitter e(Vec3(0,0,0), 1000);
+    EXPECT_TRUE(e.getNumParticles() == 1000);
+}
+

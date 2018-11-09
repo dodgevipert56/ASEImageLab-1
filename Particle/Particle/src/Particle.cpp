@@ -1,6 +1,14 @@
 #include "Particle.h"
 #include <iostream>
 
+Particle::Particle(const Vec3 &_pos,
+                   const Vec3 &_dir,
+                   size_t _maxLife):
+    m_position(_pos), m_dir(_dir), m_maxlife(_maxLife)
+{
+
+}
+
 Vec3 Particle::getPosition() const
 {
     return m_position;
@@ -11,12 +19,12 @@ void Particle::setPosition(const Vec3 &pos)
     m_position = pos;
 }
 
-int Particle::getLife() const
+size_t Particle::getLife() const
 {
     return m_life;
 }
 
-void Particle::setLife(int _life)
+void Particle::setLife(size_t _life)
 {
     m_life=_life;
 }
@@ -41,12 +49,12 @@ Vec3 Particle::getDirection() const
     return m_dir;
 }
 
-void Particle::setMaxLife(int _maxlife)
+void Particle::setMaxLife(size_t _maxlife)
 {
     m_maxlife = _maxlife;
 }
 
-int Particle::getMaxLife() const
+size_t Particle::getMaxLife() const
 {
     return m_maxlife;
 }
@@ -54,6 +62,13 @@ int Particle::getMaxLife() const
 void Particle::update()
 {
     m_position += m_dir;
+    m_life++;
+    if (m_life >= m_maxlife)
+    {
+        // reset
+        m_position = Vec3(0.0f, 0.0f, 0.0f);
+        m_life = 0;
+    }
 }
 
 void Particle::render() const
