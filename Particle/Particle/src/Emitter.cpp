@@ -36,3 +36,11 @@ void Emitter::render() const
         p.render();
     }
 }
+
+void Emitter::renderGL() const
+{
+    for (auto p : m_particles)
+    {
+        p.renderGL();
+    }
+}

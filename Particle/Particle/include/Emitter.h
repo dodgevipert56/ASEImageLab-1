@@ -11,6 +11,7 @@ public:
     Emitter(const Vec3 &_pos, size_t numParticles);
     Emitter(const Emitter &) = default;
     void render() const;
+    void renderGL() const;
     void update();
     size_t getNumParticles() const;
 private:

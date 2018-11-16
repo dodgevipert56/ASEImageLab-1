@@ -1,12 +1,19 @@
 #include "Particle.h"
 #include <iostream>
+#include <GL/gl.h>
+#include <random>
 
 Particle::Particle(const Vec3 &_pos,
                    const Vec3 &_dir,
                    size_t _maxLife):
     m_position(_pos), m_dir(_dir), m_maxlife(_maxLife)
 {
-
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> color(0.0f, 1.0f);
+    m_color.x = color(gen);
+    m_color.y = color(gen);
+    m_color.z = color(gen);
 }
 
 Vec3 Particle::getPosition() const
@@ -74,4 +81,10 @@ void Particle::update()
 void Particle::render() const
 {
     std::cout << m_position.x << " " << m_position.y << " " << m_position.z << "\n";
+}
+
+void Particle::renderGL() const
+{
+    glColor3f(m_color.x, m_color.y, m_color.z);
+    glVertex3f(m_position.x, m_position.y, m_position.z);
 }

@@ -32,10 +32,11 @@ public:
     void update();
 
     void render() const;
+    void renderGL() const;
 
 private:
     Vec3 m_position;
-    Vec3 m_color = {0.0f, 0.0f, 0.0f};
+    Vec3 m_color = {0.3f, 0.3f, 0.3f};
     size_t m_life = 0;
     Vec3 m_dir;
     size_t m_maxlife = 0;
